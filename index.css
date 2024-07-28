@@ -6,27 +6,35 @@
   font-family: "outfit";
   src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
 }
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background-color: hsl(330, 100%, 98%);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0px auto;
-  min-height: 100vh;
-  padding: 6rem;
+
+  /* min-height: 100vh; */
+  margin-top: 7.6875rem;
+  margin-bottom: 7.6875rem;
+  /* padding: 6rem; */
 }
 .main-container {
   background-color: white;
   color: black;
-  max-width: 43rem;
-  font-family: "outfit";
+  /* max-width: 43rem; */
 
+  max-width: 45.94rem;
+  font-family: "outfit";
+  /* padding: 2.5rem; */
   border-radius: 1.5rem;
 }
-img{
-  max-width: 38rem;
-  
+img {
+  max-width: 45rem;
+  /* max-width: 100%; */
   border-radius: 1.5rem;
   padding: 2rem;
 }
@@ -56,6 +64,8 @@ img{
   height: 12rem;
   border-radius: 1rem;
   margin: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 .preparation-time {
   color: hsl(332, 51%, 32%);
@@ -105,42 +115,151 @@ li {
   padding: 1.4rem;
   color: hsl(14, 45%, 36%);
 }
+.ingredients-section {
+  color: hsl(30, 10%, 34%);
+  font-family: "Outfit", sans-serif;
+}
+.ingredients-section > ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 
+.ingredients-section > ul > li {
+  color: hsl(14, 45%, 36%);
+  font-size: 0.8rem;
+  line-height: 2rem;
+  padding-left: 1.1rem;
+  font-family: "Outfit", sans-serif;
+}
+.itemlist {
+  font-size: 1rem;
+  font-family: "Outfit", sans-serif;
+  color: hsl(30, 10%, 34%);
+}
+.instructions-section {
+  color: hsl(30, 10%, 34%);
+  font-family: "Outfit", sans-serif;
+}
+.instructions-section > ol {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.instructions-section > ol > li {
+  color: hsl(14, 45%, 36%);
+  font-size: 0.8rem;
+  padding-left: 1.1rem;
+  line-height: 2rem;
 
+  font-family: "Outfit", sans-serif;
+}
+.nutrition-section {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.liinstruction {
+  font-size: 1rem;
+
+  font-family: "Outfit", sans-serif;
+  color: hsl(30, 10%, 34%);
+}
 /* Responsive screen media  */
 
-@media screen and  (max-width:640px) {
-    .main-container{ 
-        width: 100%;
-        background-color: white;
-        border: none;
-        margin: 0;
-        padding-right: 0;
-        padding-left: 0;
-        padding-top: 0;
-    }
-    .main-container ,.image-omelette{
-       width: 100%;
-       border-radius: 0;
-    }
-   
-    .title{
-      font-size: 1.5rem;
-      font-weight: 400;
-      padding: 0.2rem;
-      line-height: 32px;
-      text-align: left;
-      font-family: "Young-Serif";
-    }
-    body{
-      background-color: white;
-    }
+@media only screen and (max-width: 700px) {
+  body {
+    background-color: white;
+    margin: auto;
+    /* padding-bottom: 2rem; */
+  }
+  .main-container {
+    margin: 0;
 
-.heading-section,.ingredients-section,.instructions-section,.nutrition-section {
-      padding-left:2.5rem ;
-      padding-right:2.5rem ;
+    padding: 10px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  .main-container > .image-omelette {
+    width: 100%;
+
+    border-radius: 0;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 0.2rem;
+    line-height: 32px;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    text-align: left;
+    font-family: "Young-Serif";
+  }
+  .description {
+    padding: 0.2rem;
+    /* line-height: 32px; */
+    margin: 20px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .preparation {
+    padding: 0.2rem;
+    line-height: 130%;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    height: 16rem;
+    margin: 15px;
+
+    border-radius: 5px;
+  }
+  .preparation-time {
+    line-height: 120%;
+  }
+
+  .heading-section,
+  .ingredients-section,
+  .instructions-section,
+  .nutrition-section {
+    padding-left: 4.5rem;
+    margin: 10px 10px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 4.5rem;
+  }
 }
-.line{
-  line-height: 1.5rem;
+@media only screen and (max-width: 800px) {
+  .main-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 0px auto;
+    padding-left: 4.5rem;
+    padding-right: 4rem;
+  }
+  .description {
+    margin: 10px;
+    padding: 10px;
+  }
 }
+
+@media only screen and (max-width: 375px) {
+  .main-container {
+    width: 100%;
+    margin: auto;
+  }
+  .description {
+    margin: 10px;
+    padding: 4rem;
+  }
+  .image-omelette {
+    width: 400px;
+  }
 }
